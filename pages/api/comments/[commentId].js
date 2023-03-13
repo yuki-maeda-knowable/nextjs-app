@@ -13,10 +13,5 @@ export default function handler(req, res) {
     const index = comments.findIndex((comment) => comment.id === parseInt(commentId))
     comments.splice(index, 1)
     res.status(200).json(deleteComment)
-  }else if (req.method === 'PUT'){
-    const editComment = comments.find((comment) => comment.id === parseInt(commentId))
-    alert('aaaaa')
-
-  }
-  
+  }  
 }
