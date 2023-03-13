@@ -2,15 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+```bash
+
+# jsonserverインストール
+npm install json-server
+
+# swrのインストール
+npm install swr
+
+```
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+
+サンプルでAPIの取得とかができるサイト
+https://jsonplaceholder.typicode.com/
+
+
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
