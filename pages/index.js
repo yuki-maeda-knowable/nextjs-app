@@ -7,6 +7,9 @@ export default function Home() {
       <Link href={'/users'}>
         users
       </Link>
+      <Link href={'/posts'}>
+        posts
+      </Link>
     </>
   )
 }
