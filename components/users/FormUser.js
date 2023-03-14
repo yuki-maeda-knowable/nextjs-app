@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function FormUser() {
   const [userName, setUserName] = useState('')
   const [userEmail, setUserEmail] = useState('')
+  const router = useRouter()
 
   const handleInputName = (e) => {
     setUserName(e.target.value)
@@ -32,6 +34,7 @@ export default function FormUser() {
 
     const data = await res.json()
     console.log('data: ' + data);
+    router.push('/')
     // e.target.reset
   }
   return(
@@ -44,7 +47,6 @@ export default function FormUser() {
         <input type="email" name='email' value={userEmail} onChange={handleInputEmail} />
         <br />
         <button type='submit'>送信</button>
-        {userName}
       </form>
     </>
   )
