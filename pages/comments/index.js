@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { useState } from "react"
-
 
 export default function Comments() {
   //GETでLoad Commentsを押すとコメント一覧を取得
@@ -47,7 +47,9 @@ export default function Comments() {
         comments.map((comment => {
           return(
             <div key={comment.id}>
-              <h2>{comment.id} {comment.text}</h2>
+              <Link href={`/comments/${comment.id}`}>
+                <h2>{comment.id} {comment.text}</h2>
+              </Link>
               <button onClick={() => deleteComment(comment.id)}>Delete</button>
               {/* 削除の時のonclickの書き方は以下の書き方もできる */}
               {/* <button onClick={deleteComment.bind(this, comment.id)}>Delete</button> */}

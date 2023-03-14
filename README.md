@@ -21,6 +21,14 @@ https://jsonplaceholder.typicode.com/
 
 
 
+next-auth.jsのインストール
+```
+npm install next-auth
+
+```
+使い方
+https://next-auth.js.org/getting-started/example
+
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
