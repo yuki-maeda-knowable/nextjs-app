@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import User from '../components/users/user';
+import User from '../../components/users/user';
 
 export async function getStaticProps() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users')

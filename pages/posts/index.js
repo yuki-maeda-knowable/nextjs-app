@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Post from "../components/posts/post"
+import Post from "../../components/posts/post"
 
 export async function getStaticProps() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
