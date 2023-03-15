@@ -14,11 +14,9 @@ export default function FormUser() {
     setUserEmail(e.target.value)
   }
 
-  async function submitUserData(e) {
-    //ここでcommentを送信したら/api/commentsの方でpostを受け取った後の処理を書く
-    // const formData = new FormData()
-
-    // console.dir('formData: ' + formData)
+  async function submitUserData() {
+    //送信ボタンを押下したら/api/user/indexの方でpostを受け取った後の処理を書く
+    //formDataに入力された値を格納
     const formData = {
       email: userEmail,
       name: userName
@@ -30,12 +28,9 @@ export default function FormUser() {
         'Content-Type': 'application/json'
       }
     })
-    // console.dir('formData: ' + formData)
-
     const data = await res.json()
-    console.log('data: ' + data);
+    router.refresh();
     router.push('/')
-    // e.target.reset
   }
   return(
     <>
