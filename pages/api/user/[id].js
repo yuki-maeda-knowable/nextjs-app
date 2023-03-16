@@ -10,10 +10,6 @@ export default async function handler(req, res) {
       where: {id : +id}
     })
     // ステータスが200だったらjsonで返す
-    res.status(200).json({message: "ok"})
-  }else if (req.method === 'GET'){
-    const { id } = req.query
-    await prisma.user.findUnique({where: {id: +id}})
-    res.status(200).json({message: "ok"})
+    res.status(200).json({message: "削除"})
   }
 }
