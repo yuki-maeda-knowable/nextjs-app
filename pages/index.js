@@ -16,17 +16,6 @@ export default function Home({users}) {
   return (
     <>
       <h1>hello, world</h1>
-      <Link href={'/users-json'}>
-        <button>
-          users
-        </button>
-      </Link>
-      <Link href={'/posts'}>
-        <button>
-          posts
-        </button>
-      </Link>
-      
       <Card users={users}/>
       <FormUser />
 
